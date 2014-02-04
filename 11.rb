@@ -2,29 +2,20 @@
 
 class CartesianProduct
   include Enumerable
-
-  def initialize(array_a, array_b)
-    @cartesian_array = Array.new(0)
-    array_a.each do |element_a|
-      array_b.each do |element_b|
-        tmp_array = Array.new(0)
-        tmp_array.push(element_a,element_b)
-        @cartesian_array.push(tmp_array)
-      end
-    end
-    @cartesian_array
+  def initialize(a, b)
+	@values = []
+	@values = a.product(b) #unless b.empty?
   end
 
   def each
-    @cartesian_array.each { |index| yield(index) }
+	@values.each{ |v| p v}
   end
 
 end
 
 #Example test cases:
 
-c = CartesianProduct.new([:a,:b], [4,5])
-
+c = CartesianProduct.new([:a,:b,:c], [4,5])
 c.each { |elt| puts elt.inspect }
 
 # [:a, 4]
@@ -35,4 +26,5 @@ c.each { |elt| puts elt.inspect }
 
 # [:b, 5]
 
- 
+c = CartesianProduct.new([:a,:b], [])
+c.each { |elt| puts elt.inspect }
