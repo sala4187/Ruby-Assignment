@@ -6,7 +6,7 @@ def count_words(string)
     words = string.downcase.split(/\W+/) # split string at any non word character, ignore case
     word_count = Hash.new(0) # initialize hash
     words.each { |word| word_count[word] += 1} 
-    word_count
+    word_count 
 
 end
 
@@ -15,5 +15,3 @@ puts count_words("A man, a plan, a canal -- Panama")
 
 puts count_words "Doo bee doo bee doo"
 # => {'doo' => 3, 'bee' => 2}
-
-puts count_words " "
