@@ -12,3 +12,4 @@ puts palindrome?("Madam, I'm Adam!")                 # => true
 
 puts palindrome?("Abracadabra")                     # => false (nil is also ok)
 
+
