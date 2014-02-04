@@ -50,7 +50,6 @@ class JellyBean < Dessert
   end
 end
 
-puts " "
 puts "7(b)"
 black_licorice=JellyBean.new("a",150,"black licorice")
 puts "black licorice delicious?"
