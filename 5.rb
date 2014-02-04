@@ -2,7 +2,8 @@
 
 def combine_anagrams(words)
 
-    words.group_by {|i| i.downcase.chars.sort.join}.values
+	words.group_by {|w| w.downcase.chars.sort.join}.values
+	# change words to individual characters to sort, then join, then use values to put into array
 
 end
 
@@ -22,5 +23,3 @@ print combine_anagrams(test)
 #           ["potatoes"],
 
 #           ["creams", "scream"] ]
-
-# Hint: You can quickly tell if two words are anagrams by sorting their letters, keeping in mind that upper vs. lowercase doesn't matter.
